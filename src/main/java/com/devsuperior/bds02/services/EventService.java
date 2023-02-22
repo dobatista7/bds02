@@ -61,12 +61,16 @@ public class EventService {
 		entity.setName(dto.getName());
 		entity.setDate(dto.getDate());
 		entity.setUrl(dto.getUrl());
-		
+		entity.setCity(new City(dto.getCityId(), null));
+						
 		entity.getCities().clear();
 		for(CityDTO citDto : dto.getCities()) {
 			City city = cityRepository.getOne(citDto.getId());
 			entity.getCities().add(city);
+			
 		}
+		
+		
 		
 	}
 
