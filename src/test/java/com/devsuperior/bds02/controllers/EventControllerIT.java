@@ -1,5 +1,6 @@
 package com.devsuperior.bds02.controllers;
 
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.put;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
@@ -29,6 +30,7 @@ public class EventControllerIT {
 	@Autowired
 	private ObjectMapper objectMapper;
 	
+		
 	@Test
 	public void updateShouldUpdateResourceWhenIdExists() throws Exception {
 
